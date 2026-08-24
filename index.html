@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ATM Project</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="atm-container">
+
+        <h1>🏧 ATM PROJECT</h1>
+        <p class="subtitle">A Simple ATM System</p>
+
+        <!-- PIN SCREEN -->
+        <div id="loginScreen">
+
+            <h2>Welcome</h2>
+
+            <p>Enter your PIN</p>
+
+            <input
+                type="password"
+                id="pinInput"
+                placeholder="Enter PIN"
+                maxlength="4"
+            >
+
+            <button onclick="login()">Login</button>
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+
+        <!-- ATM SCREEN -->
+        <div id="atmScreen" class="hidden">
+
+            <h2>ATM MENU</h2>
+
+            <button onclick="checkBalance()">
+                💰 Check Balance
+            </button>
+
+            <button onclick="deposit()">
+                💵 Deposit
+            </button>
+
+            <button onclick="withdraw()">
+                💸 Withdraw
+            </button>
+
+            <button onclick="logout()">
+                🚪 Logout
+            </button>
+
+            <div id="message"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
